@@ -119,12 +119,12 @@ END:VCARD`;
                 </div>
 
                 {/* Right Side */}
-                <div className="flex-1 w-full min-w-80 bg-base-300">
-                    <div className="w-9/12 p-14 min-w-80 space-y-4 min-h-screen mx-auto">
+                <div className="flex-1 w-full bg-base-300">
+                    <div className="w-9/12 py-6 md:p-14 space-y-4 md:min-h-screen mx-auto">
 
                         <button
                             onClick={() => setIsFormVisible(!isFormVisible)}
-                            className="btn btn-block min-w-80 btn-primary no-animation "
+                            className="btn btn-block btn-primary no-animation "
                         >
                             {isFormVisible ? 'View Mode' : 'Create Your Digital Card'}
                         </button>
@@ -211,7 +211,7 @@ END:VCARD`;
 
                         <div
                             id="digitalCard"
-                            className="bg-white shadow-lg rounded-lg p-4 sm:p-6 text-center min-w-80 w-full max-w-sm sm:max-w-md mx-auto relative"
+                            className="bg-white shadow-lg rounded-lg p-4 sm:p-6 text-center w-full max-w-sm sm:max-w-md mx-auto relative"
                             style={{
                                 background: "linear-gradient(to bottom, #f9f9f9, #e2e2e2)",
                             }}
