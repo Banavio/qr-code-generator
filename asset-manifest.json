@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/qr-code-generator/static/css/main.30000116.css",
-    "main.js": "/qr-code-generator/static/js/main.f4710916.js",
+    "main.js": "/qr-code-generator/static/js/main.824ad90c.js",
     "static/js/453.2018e620.chunk.js": "/qr-code-generator/static/js/453.2018e620.chunk.js",
     "static/media/fa-solid-900.ttf": "/qr-code-generator/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/banavio_banner.png": "/qr-code-generator/static/media/banavio_banner.7f3b069dfd0d1a139a19.png",
@@ -14,11 +14,11 @@
     "static/media/fa-v4compatibility.woff2": "/qr-code-generator/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/qr-code-generator/index.html",
     "main.30000116.css.map": "/qr-code-generator/static/css/main.30000116.css.map",
-    "main.f4710916.js.map": "/qr-code-generator/static/js/main.f4710916.js.map",
+    "main.824ad90c.js.map": "/qr-code-generator/static/js/main.824ad90c.js.map",
     "453.2018e620.chunk.js.map": "/qr-code-generator/static/js/453.2018e620.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30000116.css",
-    "static/js/main.f4710916.js"
+    "static/js/main.824ad90c.js"
   ]
 }
