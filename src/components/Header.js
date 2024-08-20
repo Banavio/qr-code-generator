@@ -9,14 +9,8 @@ const Header = () => {
         <h1 className="text-3xl font-bold">BANAVIO</h1>
       </div>
       <div className="flex space-x-4">
-        <a href="https://facebook.com" className="btn btn-square btn-outline rounded-lg" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-facebook fa-lg"></i>
-        </a>
-        <a href="https://twitter.com" className="btn btn-square btn-outline rounded-lg" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-twitter fa-lg"></i>
-        </a>
-        <a href="https://instagram.com" className="btn btn-square btn-outline rounded-lg" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-instagram fa-lg"></i>
+        <a href="https://www.linkedin.com/company/banavio" className="btn btn-square btn-outline rounded-lg" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin fa-lg"></i>
         </a>
       </div>
     </header>
