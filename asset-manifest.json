@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/qr-code-generator/static/css/main.d43514ca.css",
-    "main.js": "/qr-code-generator/static/js/main.cc01ee43.js",
+    "main.css": "/qr-code-generator/static/css/main.32d9c60d.css",
+    "main.js": "/qr-code-generator/static/js/main.47fd2faa.js",
     "static/js/453.2018e620.chunk.js": "/qr-code-generator/static/js/453.2018e620.chunk.js",
     "static/media/fa-solid-900.ttf": "/qr-code-generator/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/banavio_banner.png": "/qr-code-generator/static/media/banavio_banner.7f3b069dfd0d1a139a19.png",
     "static/media/fa-brands-400.ttf": "/qr-code-generator/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/qr-code-generator/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
     "static/media/fa-brands-400.woff2": "/qr-code-generator/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
@@ -12,12 +13,12 @@
     "static/media/fa-v4compatibility.ttf": "/qr-code-generator/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/qr-code-generator/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/qr-code-generator/index.html",
-    "main.d43514ca.css.map": "/qr-code-generator/static/css/main.d43514ca.css.map",
-    "main.cc01ee43.js.map": "/qr-code-generator/static/js/main.cc01ee43.js.map",
+    "main.32d9c60d.css.map": "/qr-code-generator/static/css/main.32d9c60d.css.map",
+    "main.47fd2faa.js.map": "/qr-code-generator/static/js/main.47fd2faa.js.map",
     "453.2018e620.chunk.js.map": "/qr-code-generator/static/js/453.2018e620.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d43514ca.css",
-    "static/js/main.cc01ee43.js"
+    "static/css/main.32d9c60d.css",
+    "static/js/main.47fd2faa.js"
   ]
 }
