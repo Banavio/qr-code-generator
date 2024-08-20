@@ -1,35 +1,30 @@
-// import React from 'react';
-// import QRGenerator from './QRGenerator';
-// import './App.css';
-// import Header from './Header';
-
-// function App() {
-//   return (
-//     <div className='bg-base-100 text-base-content'>
-//       <Header />
-//       <QRGenerator />
-//     </div>
-//   );
-// }
-
-// export default App;
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import QRPage from './pages/QRPage';
 import DigitalCardPage from './pages/DigitalCardPage';
+import Layout from './components/Layout';
 import './App.css';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "qr-code-generator/qr",
+        element: <QRPage />,
+      },
+      {
+        path: "qr-code-generator/digital-card",
+        element: <DigitalCardPage />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="qr" element={<QRPage />} />
-          <Route path="digital-card" element={<DigitalCardPage />} />
-        </Route>
-      </Routes>
-    </Router>
+    <RouterProvider router={router} />
   );
 }
 
