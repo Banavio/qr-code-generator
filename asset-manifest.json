@@ -1,24 +1,29 @@
 {
   "files": {
-    "main.css": "/qr-code-generator/static/css/main.30000116.css",
-    "main.js": "/qr-code-generator/static/js/main.824ad90c.js",
+    "main.css": "/qr-code-generator/static/css/main.ab3b2fa1.css",
+    "main.js": "/qr-code-generator/static/js/main.ec5ea059.js",
     "static/js/453.2018e620.chunk.js": "/qr-code-generator/static/js/453.2018e620.chunk.js",
+    "static/media/mobile_cover_image4.jpg": "/qr-code-generator/static/media/mobile_cover_image4.ec5fbcd9bd413d02acf5.jpg",
     "static/media/fa-solid-900.ttf": "/qr-code-generator/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
-    "static/media/banavio_banner.png": "/qr-code-generator/static/media/banavio_banner.7f3b069dfd0d1a139a19.png",
+    "static/media/section3.png": "/qr-code-generator/static/media/section3.1d9f7d82fd1b074ddb42.png",
     "static/media/fa-brands-400.ttf": "/qr-code-generator/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/section2.png": "/qr-code-generator/static/media/section2.eb98025f95d3f60dce05.png",
     "static/media/fa-solid-900.woff2": "/qr-code-generator/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/hero-background.png": "/qr-code-generator/static/media/hero-background.56344274531b93bc64be.png",
     "static/media/fa-brands-400.woff2": "/qr-code-generator/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/hero-image.png": "/qr-code-generator/static/media/hero-image.a568430fdba0f6af082a.png",
+    "static/media/banavio_banner.png": "/qr-code-generator/static/media/banavio_banner.d3160fab6d50124970a2.png",
     "static/media/fa-regular-400.ttf": "/qr-code-generator/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
     "static/media/fa-regular-400.woff2": "/qr-code-generator/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
     "static/media/fa-v4compatibility.ttf": "/qr-code-generator/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/qr-code-generator/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/qr-code-generator/index.html",
-    "main.30000116.css.map": "/qr-code-generator/static/css/main.30000116.css.map",
-    "main.824ad90c.js.map": "/qr-code-generator/static/js/main.824ad90c.js.map",
+    "main.ab3b2fa1.css.map": "/qr-code-generator/static/css/main.ab3b2fa1.css.map",
+    "main.ec5ea059.js.map": "/qr-code-generator/static/js/main.ec5ea059.js.map",
     "453.2018e620.chunk.js.map": "/qr-code-generator/static/js/453.2018e620.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.30000116.css",
-    "static/js/main.824ad90c.js"
+    "static/css/main.ab3b2fa1.css",
+    "static/js/main.ec5ea059.js"
   ]
 }
