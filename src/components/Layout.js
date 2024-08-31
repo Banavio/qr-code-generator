@@ -4,9 +4,10 @@ import Header from './Header';
 
 
 const Layout = () => {
+  
   return (
     
-    <div className='bg-base-100 text-base-content'>
+    <div className='bg-base-100 text-base-content' data-theme="business">
         <Header />
         <div className="flex flex-col min-h-screen bg-base-200 ">
             <Outlet />

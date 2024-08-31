@@ -4,35 +4,32 @@ import QRPage from './pages/QRPage';
 import DigitalCardPage from './pages/DigitalCardPage';
 import Layout from './components/Layout';
 import './App.css';
-
-const NotFound = () => {
-  return (
-    <div className="flex flex-col items-center justify-center h-screen bg-base-100 text-base-content">
-      <h1 className="text-6xl font-bold mb-4">404</h1>
-      <p className="text-2xl">Page Not Found</p>
-    </div>
-  );
-};
+import HomePage from './pages/HomePage';
+import NotFound from './pages/NotFound'; 
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "qr-code-generator",
     element: <Layout />,
     children: [
       {
-        path: "qr-code-generator/qr",
+        path: "qr",
         element: <QRPage />,
       },
       {
-        path: "qr-code-generator/digital-card",
+        path: "digital-card",
         element: <DigitalCardPage />,
       },
     ],
   },
-  // {
-  //   path: "/*",
-  //   element: <NotFound />,
-  // }
+  {
+    path: "qr-code-generator/",
+    element: <HomePage />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  }
 ]);
 
 
