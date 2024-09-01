@@ -52,6 +52,9 @@ const DigitalCardPage = () => {
     }, [location.search]);
 
     useEffect(() => {
+        if (isTeam) {
+            formData.team = 'true';
+        }
         const filteredParams = Object.entries(formData)
             .filter(([key, value]) => value.trim() !== '') // Filter out empty values
             .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
@@ -97,18 +100,17 @@ const DigitalCardPage = () => {
     };
 
     const generateVCard = () => {
-        const { firstName, lastName, nickName, company, phoneNumber, email, jobTitle } = formUpdated ? formData : dummyData;
+        const { firstName, lastName, company, phoneNumber, email, jobTitle } = formUpdated ? formData : dummyData;
 
         return `BEGIN:VCARD
 VERSION:4.0
 N:${lastName};${firstName};;;
 FN:${firstName} ${lastName}
-NICKNAME:${nickName}
 ORG:${company}
 TEL;TYPE=WORK,VOICE:${phoneNumber}
 EMAIL;TYPE=WORK:${email}
 TITLE:${jobTitle}
-URL;TYPE=WEBSITE:https://www.linkedin.com/company/banavio
+URL;TYPE=WEBSITE:https://banavio.com
 END:VCARD`;
     };
 
