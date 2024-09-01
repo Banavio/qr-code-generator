@@ -5,11 +5,13 @@ import { saveAs } from 'file-saver';
 import { FaPhoneAlt, FaEnvelope, FaDownload } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import banavio_banner from '../assets/images/banavio_banner.png';
+import logoImage from '../assets/images/banavio-logo.jpeg';
 
 const DigitalCardPage = () => {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
+        nickName: '',
         company: '',
         phoneNumber: '',
         email: '',
@@ -20,6 +22,7 @@ const DigitalCardPage = () => {
     const [dummyData, setDummyData] = useState({
         firstName: 'John',
         lastName: 'Doe',
+        nickName: null,
         company: 'Banavio',
         phoneNumber: '+1234567890',
         email: 'banavio@example.com',
@@ -29,23 +32,25 @@ const DigitalCardPage = () => {
     const [formUpdated, setFormUpdated] = useState(false);
     const [isFormVisible, setIsFormVisible] = useState(false);
 
+    const [isTeam, setIsTeam] = useState(false);
+
     const location = useLocation();
 
-    // Parse URL parameters and set form data
     useEffect(() => {
         const params = new URLSearchParams(location.search);
         const loadedData = {
             firstName: params.get('firstName') || '',
             lastName: params.get('lastName') || '',
+            nickName: params.get('nickName') || '',
             company: params.get('company') || '',
             phoneNumber: params.get('phoneNumber') || '',
             email: params.get('email') || '',
             jobTitle: params.get('jobTitle') || '',
         };
         setFormData(loadedData);
+        setIsTeam(params.get('team') === 'true');
     }, [location.search]);
 
-    // Update URL when form data changes
     useEffect(() => {
         const filteredParams = Object.entries(formData)
             .filter(([key, value]) => value.trim() !== '') // Filter out empty values
@@ -83,21 +88,22 @@ const DigitalCardPage = () => {
             })
             .catch((err) => {
                 console.error('Error generating image', err);
+                alert('Error generating image. Please try again.');
             });
-        
-        // 100 ms delay to show the download button again
+
         setTimeout(() => {
             cardButton.style.display = 'block';
         }, 100);
     };
 
     const generateVCard = () => {
-        const { firstName, lastName, company, phoneNumber, email, jobTitle } = formUpdated ? formData : dummyData;
+        const { firstName, lastName, nickName, company, phoneNumber, email, jobTitle } = formUpdated ? formData : dummyData;
 
         return `BEGIN:VCARD
 VERSION:4.0
 N:${lastName};${firstName};;;
 FN:${firstName} ${lastName}
+NICKNAME:${nickName}
 ORG:${company}
 TEL;TYPE=WORK,VOICE:${phoneNumber}
 EMAIL;TYPE=WORK:${email}
@@ -120,11 +126,11 @@ END:VCARD`;
 
                 {/* Right Side */}
                 <div className="flex-1 w-full bg-base-300">
-                    <div className="w-9/12 py-6 md:p-14 space-y-4 md:min-h-screen mx-auto">
+                    <div className="w-11/12 py-6 md:p-14 space-y-4 md:min-h-screen mx-auto">
 
                         <button
                             onClick={() => setIsFormVisible(!isFormVisible)}
-                            className="btn btn-block btn-primary no-animation "
+                            className="btn btn-block btn-primary no-animation w-full"
                         >
                             {isFormVisible ? 'View Mode' : 'Create Your Digital Card'}
                         </button>
@@ -208,12 +214,13 @@ END:VCARD`;
                                 </div>
                             </form>
                         )}
-
-                        <div
-                            id="digitalCard"
-                            className="bg-white shadow-lg rounded-lg p-4 sm:p-6 text-center w-full max-w-sm sm:max-w-md mx-auto relative"
+                        <div className="p-5 w-fit mx-auto" 
+                            >
+                        <div id="digitalCard"
+                            className="bg-white shadow-lg rounded-lg p-4 sm:p-6 text-center mx-auto relative"
                             style={{
                                 background: "linear-gradient(to bottom, #f9f9f9, #e2e2e2)",
+                                width: '350px',
                             }}
                         >
                             {/* Transparent Download Button */}
@@ -225,6 +232,19 @@ END:VCARD`;
                             >
                                 <FaDownload className="text-sm text-gray-500" />
                             </button>
+                            { formData.nickName && (
+                            <div style={{
+                                width: '180px',
+                                height: '30px',
+                                fontSize: '50px',
+                                position:'absolute',
+                                top:210,
+                                left:220,
+                                rotate: '90deg',
+                                textAlign: 'center',
+
+                            }}>{formData.nickName}</div>
+                            )}
 
                             <div className="flex flex-col items-center">
                                 {/* Name and Job Title */}
@@ -240,7 +260,9 @@ END:VCARD`;
                                     {formUpdated ? formData.company : dummyData.company}
                                 </p>
                                 <div className="flex flex-col items-center my-4 space-y-2 shadow-md p-1 bg-white rounded-lg">
-                                    <QRCode value={generateVCard()} size={150} qrStyle='dots' />
+                                    <QRCode value={generateVCard()} size={150} qrStyle='dots' 
+                                    {...(isTeam && { logoPadding: 3, logoImage })}
+                                    />
                                 </div>
                                 <div className="flex flex-col items-center text-gray-800 space-y-2">
                                     <p className="flex items-center">
@@ -255,13 +277,11 @@ END:VCARD`;
                                 Created with Banavio
                             </div>
                         </div>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
         </>
-
     );
 };
 
